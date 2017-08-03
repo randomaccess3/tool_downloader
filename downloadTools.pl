@@ -253,8 +253,10 @@ sub downloadFile($$){
 	# file is downloaded and saved as the name in the first field, the assumption is that the name hasn't got a file extension but it should work if it doesnt
 	# then get the file extension from the URL and add it to the name
 	my $url_filename = basename($url);
-	my ($file_name, $file_extension) = split /\./, $url_filename;
-
+	my ($file_name, @remainder) = split /\./, $url_filename;
+	my $file_extension = $remainder[$#remainder];
+	
+	
 	if (-e "$dir\/$name\.$file_extension"){
 		#print "$name exists and will not be downloaded\n";
 		$progress->Append("- $name exists and will not be downloaded\r\n");
