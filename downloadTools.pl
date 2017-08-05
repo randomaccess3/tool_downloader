@@ -1,4 +1,9 @@
 # Download latest versions of all tools
+# 
+# 20170801 	- initial commit
+# 20170805 	- can comment out lines in the links.txt file with a # at the beginning
+
+# created by Phill Moore, randomaccess3@gmail.com
 
 use strict;
 use warnings;
@@ -7,12 +12,13 @@ use File::Basename;
 use Win32::GUI;
 use Cwd; #current working directory
 
+
+my $VERSION = "0\.02";
+my $TITLE = "Download Tools";
 my $downloadDirectory = "Tools";
 our %tools;
 
-#loadHash();
-
-#sub loadHash(){
+#load hash
 my $file = "";
 
 $file = "links.txt";
@@ -31,6 +37,7 @@ if ($file eq ""){
 
 open(FH,"<",$file);
 foreach my $line (<FH>){
+	next if $line =~ /^\#.*/;
 	chomp $line;
 	(my $name,my $link) = split /,/, $line;  
 	#print "Name: $name\nLink: $link\n----------------\n";
@@ -50,8 +57,6 @@ chdir($downloadDirectory) or die "$!";
 
 
 #create GUI
-my $VERSION = "0\.01";
-my $TITLE = "Download Tools";
 
 #=======================================================
 # GUI LAYOUT VARIABLES

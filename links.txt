@@ -9,8 +9,8 @@ JumplistExplorer,https://ericzimmerman.github.io/Software/JumpListExplorer.zip
 TimelineExplorer,https://ericzimmerman.github.io/Software/TimelineExplorer.zip
 Windows Forensic Analysis 4e Tools,https://github.com/keydet89/Tools/archive/master.zip
 Regripper,https://github.com/keydet89/RegRipper2.8/archive/master.zip
-Arsenal Image Mounter Mount Tool,https://github.com/ArsenalRecon/Arsenal-Image-Mounter/raw/master/MountTool/ArsenalImageMounterMountTool.exe
-Arsenal Image Mounter Control,https://github.com/ArsenalRecon/Arsenal-Image-Mounter/raw/master/MountTool/ArsenalImageMounterControl.exe
+#Arsenal Image Mounter Mount Tool,https://github.com/ArsenalRecon/Arsenal-Image-Mounter/raw/master/MountTool/ArsenalImageMounterMountTool.exe
+#Arsenal Image Mounter Control,https://github.com/ArsenalRecon/Arsenal-Image-Mounter/raw/master/MountTool/ArsenalImageMounterControl.exe
 ExifTool 10.57 (developmental),http://www.sno.phy.queensu.ca/~phil/exiftool/exiftool-10.57.zip
 ExifTool 10.55 (production),http://owl.phy.queensu.ca/~phil/exiftool/exiftool-10.55.zip
 HxD, http://mh-nexus.de/downloads/HxDSetupEN.zip
