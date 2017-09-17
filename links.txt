@@ -31,3 +31,5 @@ Dcode v4.02a, http://www.digital-detective.net/software/DCode-v4.02a-build-4.02.
 HibernationRecon, https://arsenalrecon.com/apps/download/HibernationRecon_11056_Beta.zip
 Arsenal Image Mounter, https://arsenalrecon.com/apps/download/Arsenal_Image_Mounter_v200100_x64.zip
 Volatility, http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_win64_standalone.zip
+Thumbcache Viewer, https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.3.4/thumbcache_viewer.zip
+Thumbs Viewer, https://github.com/thumbsviewer/thumbsviewer/releases/download/v1.0.2.6/thumbs_viewer.zip
