@@ -9,27 +9,22 @@ JumplistExplorer,https://ericzimmerman.github.io/Software/JumpListExplorer.zip
 TimelineExplorer,https://ericzimmerman.github.io/Software/TimelineExplorer.zip
 Windows Forensic Analysis 4e Tools,https://github.com/keydet89/Tools/archive/master.zip
 Regripper,https://github.com/keydet89/RegRipper2.8/archive/master.zip
-#Arsenal Image Mounter Mount Tool,https://github.com/ArsenalRecon/Arsenal-Image-Mounter/raw/master/MountTool/ArsenalImageMounterMountTool.exe
-#Arsenal Image Mounter Control,https://github.com/ArsenalRecon/Arsenal-Image-Mounter/raw/master/MountTool/ArsenalImageMounterControl.exe
-ExifTool 10.60 (developmental),http://owl.phy.queensu.ca/~phil/exiftool/exiftool-10.60.zip
-ExifTool 10.55 (production),http://owl.phy.queensu.ca/~phil/exiftool/exiftool-10.55.zip
+ExifTool 10.80 (production),http://owl.phy.queensu.ca/~phil/exiftool/exiftool-10.80.zip
 HxD, http://mh-nexus.de/downloads/HxDSetupEN.zip
-The Sleuth Kit 4.4.1, https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.4.1/sleuthkit-4.4.1-win32.zip
-Autopsy 4.4.0 (32-bit), https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.4.0/autopsy-4.4.0-32bit.msi
-Autopsy 4.4.0 (64-bit), https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.4.0/autopsy-4.4.0-64bit.msi
+The Sleuth Kit 4.6.0, https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.6.0/sleuthkit-4.6.0-win32.zip
+Autopsy 4.6.0 (32-bit), https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.6.0/autopsy-4.6.0-32bit.msi
+Autopsy 4.6.0 (64-bit), https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.6.0/autopsy-4.6.0-64bit.msi
 PhotoRec/Testdisk 7.1, https://www.cgsecurity.org/Download_and_donate.php/testdisk-7.1-WIP.win.zip
-TZWorks_2017.05.04 (64-bit), https://www.tzworks.net/prototypes/builds/2017.05.04.win64.zip
+TZWorks_2018.02.20 (64-bit), https://www.tzworks.net/prototypes/builds/2018.02.20.win64.zip
 OpenLV, https://github.com/tvidas/OpenLV/zipball/master
-Rekall 1.6.0 x64, https://github.com/google/rekall/releases/download/v1.6.0/Rekall_1.6.0_Gotthard_x64.exe
+LiveView 0.7b, https://downloads.sourceforge.net/project/liveview/liveview/0.7b/LiveViewPublicInstallerv0.7b.exe?r=&ts=1501758489&use_mirror=nchc
 Hindsight, https://github.com/obsidianforensics/hindsight/releases/download/v2.0.0/hindsight.exe
 Hindsight GUI, https://github.com/obsidianforensics/hindsight/releases/download/v2.0.0/hindsight_gui.exe
-Plaso x64, https://github.com/log2timeline/plaso/releases/download/1.5.1/plaso-1.5.1-win-amd64-vs2010.zip
-LiveView 0.7b, https://downloads.sourceforge.net/project/liveview/liveview/0.7b/LiveViewPublicInstallerv0.7b.exe?r=&ts=1501758489&use_mirror=nchc
+plaso-20180127 x64, https://github.com/log2timeline/plaso/releases/download/20180127/plaso-20180127-amd64.zip
 Woanware_USBDeviceForensics, http://www.woanware.co.uk/downloads/USBDeviceForensics.v1.0.14.zip
 Bulk Extractor64, http://downloads.digitalcorpora.org/downloads/bulk_extractor/bulk_extractor64.exe
 Dcode v4.02a, http://www.digital-detective.net/software/DCode-v4.02a-build-4.02.0.9306.zip
-HibernationRecon, https://arsenalrecon.com/apps/download/HibernationRecon_11056_Beta.zip
-Arsenal Image Mounter, https://arsenalrecon.com/apps/download/Arsenal_Image_Mounter_v200100_x64.zip
+HibernationRecon, https://arsenalrecon.com/weapons/download/HibernationRecon_1.1.0.66_Beta.zip
+Arsenal Image Mounter, https://arsenalrecon.com/apps/download/ArsenalImageMounter_2.4.26_Beta.zip
 Volatility, http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_win64_standalone.zip
-Thumbcache Viewer, https://github.com/thumbcacheviewer/thumbcacheviewer/releases/download/v1.0.3.4/thumbcache_viewer.zip
-Thumbs Viewer, https://github.com/thumbsviewer/thumbsviewer/releases/download/v1.0.2.6/thumbs_viewer.zip
+Rekall 1.7.2P1 x64, https://github.com/google/rekall/releases/download/1.7.2rc1/Rekall_1.7.2.p1_Hurricane.Ridge_x64.exe
