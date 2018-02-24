@@ -9,6 +9,7 @@ use strict;
 use warnings;
 use WWW::Mechanize;
 use File::Basename;
+use Getopt::Long;
 use Win32::GUI;
 use Cwd; #current working directory
 
@@ -20,10 +21,22 @@ our %tools;
 
 #load hash
 my $file = "";
-
 $file = "links.txt";
 
-# if file is specified then use that, otherwise use the online one
+
+my %config;
+Getopt::Long::Configure("prefix_pattern=(-|\/)");
+GetOptions(\%config,qw(file|f=s quiet|q help|?|h));
+
+if ($config{help}) {
+	_help();
+	exit;
+}
+
+
+
+# if a file is specified in the previous line then use that, otherwise modify the 
+# $url variable with your own online text, it will download it and use that instead
 if ($file eq ""){
 	my $url = "";
 	$file = "online.txt";
@@ -32,6 +45,9 @@ if ($file eq ""){
     $m->get("$url");
 	$m->save_content($file);	
 }
+
+
+
 
 
 
@@ -53,7 +69,13 @@ unless(mkdir $downloadDirectory) {
 }
 chdir($downloadDirectory) or die "$!";
 
-
+if ($config{quiet}) {
+	foreach my $f (keys %tools){
+		my $u = $tools{$f};
+		downloadFile($f, $u);
+	}
+	exit;
+}
 
 
 #create GUI
@@ -114,6 +136,7 @@ my $closeButton_Height		= $buttonHeight;
 
 my $menu = Win32::GUI::MakeMenu(
 		"&File"                => "File",
+			" > O&pen"          => { -name => "Open"},
 			" > E&xit"             => { -name => "Exit", -onClick => sub {exit 1;}},
 		"&Help"                => "Help",
 			" > &About"            => { -name => "About", -onClick => \&aboutBox},
@@ -201,13 +224,51 @@ Win32::GUI::Dialog();
 
 # ======================================================================================
 
+sub Open_Click {
+	\&filebrowse_Click();	
+}
+
+# Open a links text file - doesnt work yet
+sub filebrowse_Click {
+	my $file = Win32::GUI::GetOpenFileName(
+             -owner  => $main,
+             -title  => "Open a downoad list",
+             -filter => ['All files' => '*.*',]
+			 );
+	$file = "\"".$file."\"";
+	$file = "new.txt";
+	if ($file){
+		%tools = ();
+		
+		print $file."\n";
+		
+		open(FH,"<",$file);
+		foreach my $line (<FH>){
+			next if $line =~ /^\#.*/;
+			chomp $line;
+			(my $name,my $link) = split /,/, $line;  
+			print "Name: $name\nLink: $link\n----------------\n";
+			$tools{$name} = $link;   
+		}
+		
+		foreach my $t (keys %tools){
+			#print $t."\t".$tools{$t}."\n";
+		}
+		
+		close FH;
+		populateToolList();
+	}
+}
+
+
 
 sub populateToolList {
+	$toolList->Clear();
 	my @availableToolList = sort keys %tools;
 
 	for my $tool (@availableToolList) {
 		my $url = dirname($tools{$tool});
-		my $file = fileparse($tools{$tool});
+		#my $file = fileparse($tools{$tool});
 		
 		$toolList->InsertItem($tool);
 	}
@@ -248,7 +309,7 @@ sub aboutBox {
   0;
 }
 
-      
+# Download a file given the url and the name you want to change the download to afterwards
 sub downloadFile($$){
 	my $name = shift;
 	my $url = shift;
@@ -261,21 +322,47 @@ sub downloadFile($$){
 	my ($file_name, @remainder) = split /\./, $url_filename;
 	my $file_extension = $remainder[$#remainder];
 	
-	
 	if (-e "$dir\/$name\.$file_extension"){
 		#print "$name exists and will not be downloaded\n";
 		$progress->Append("- $name exists and will not be downloaded\r\n");
 	}
 	else{
-		$progress->Append("- Downloading $name from $url\r\n");
-		$status->Text("Downloading please wait...");
+		if ($config{quiet}){
+			print "Downloading $name from $url\n";
+		}
+		else{
+			$progress->Append("- Downloading $name from $url\r\n");
+			$status->Text("Downloading please wait...");
+		}
+		
 		my $mech = WWW::Mechanize->new();
-			$mech->get("$url");
-			$mech->save_content($name);
-			
-			rename($name, "$name\.$file_extension");
+		$mech->get("$url");
+		$mech->save_content($name);
+				
+		rename($name, "$name\.$file_extension");
+		if ($config{quiet}){
+			print "Download complete\n";
+		}else{
 			$status->Text("Download complete");
-			
+		}
 	}
 	return;
+}
+
+
+
+
+sub _help {
+	print<< "EOT";
+downloadTools v.$VERSION - Tool Downloader
+
+Presents a list of tools to download
+
+Usage: downloadTools [-q] [-h]
+
+  -q|quiet ..........Download all tools without the GUI (not recommended)
+  -h.................Help
+  
+Lines in the text file beginning with # are ignored
+EOT
 }
