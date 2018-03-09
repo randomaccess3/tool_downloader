@@ -10,6 +10,7 @@ TimelineExplorer,https://ericzimmerman.github.io/Software/TimelineExplorer.zip
 Windows Forensic Analysis 4e Tools,https://github.com/keydet89/Tools/archive/master.zip
 Regripper,https://github.com/keydet89/RegRipper2.8/archive/master.zip
 ExifTool 10.80 (production),http://owl.phy.queensu.ca/~phil/exiftool/exiftool-10.80.zip
+ExifTool 10.83 (development),https://www.sno.phy.queensu.ca/~phil/exiftool/exiftool-10.83.zip
 HxD, http://mh-nexus.de/downloads/HxDSetupEN.zip
 The Sleuth Kit 4.6.0, https://github.com/sleuthkit/sleuthkit/releases/download/sleuthkit-4.6.0/sleuthkit-4.6.0-win32.zip
 Autopsy 4.6.0 (32-bit), https://github.com/sleuthkit/autopsy/releases/download/autopsy-4.6.0/autopsy-4.6.0-32bit.msi
