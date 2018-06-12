@@ -26,6 +26,5 @@ plaso-20180524 Win x64, https://github.com/log2timeline/plaso/releases/download/
 Woanware_USBDeviceForensics, http://www.woanware.co.uk/downloads/USBDeviceForensics.v1.0.14.zip
 Bulk Extractor64, http://downloads.digitalcorpora.org/downloads/bulk_extractor/bulk_extractor64.exe
 Dcode v4.02a, http://www.digital-detective.net/software/DCode-v4.02a-build-4.02.0.9306.zip
-HibernationRecon, https://arsenalrecon.com/weapons/download/HibernationRecon_1.1.0.66_Beta.zip
 Volatility, http://downloads.volatilityfoundation.org/releases/2.6/volatility_2.6_win64_standalone.zip
 Rekall 1.7.2P1 x64, https://github.com/google/rekall/releases/download/1.7.2rc1/Rekall_1.7.2.p1_Hurricane.Ridge_x64.exe
