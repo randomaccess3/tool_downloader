@@ -1,5 +1,10 @@
 # tool_downloader
 
+//deprecated, but the link text is still ok, just not maintained or up to date
+the ps1's should continue to work and I'll probably be focusing on putting more of them up
+
+--------------------------------------
+
 I wrote a short perl script that downloads tools based on an attached text file.
 If you run it with no options it looks for the link.txt file and then loads up the GUI 
 
