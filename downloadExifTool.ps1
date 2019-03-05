@@ -1,4 +1,4 @@
-$baseURL = "https://owl.phy.queensu.ca/~phil/exiftool/"
+$baseURL = "http://owl.phy.queensu.ca/~phil/exiftool/"
 $versionURL = $baseURL + "ver.txt"
 
 $version = Invoke-WebRequest $versionURL
